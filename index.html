@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Content - n8n Workflow Automation</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fbfcfe;
+            color: #555;
+            line-height: 1.6;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #dbdfe7;
+            border-radius: 8px;
+            padding: 24px;
+        }
+
+        .social-platform {
+            background-color: #f9f9f9;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .social-platform:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .platform-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .platform-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .platform-content {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .media-suggestion {
+            font-size: 14px;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #666;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 8px;
+            border-radius: 4px;
+            border-left: 3px solid #ddd;
+        }
+
+        .hashtags {
+            margin-bottom: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .hashtag {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 13px;
+            color: #555;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .hashtag:hover {
+            background: #e0e0e0;
+        }
+
+        .call-to-action {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 8px;
+            border-radius: 4px;
+            border-left: 3px solid #007acc;
+        }
+
+        .call-to-action a {
+            color: #1976d2;
+            text-decoration: none;
+        }
+
+        .call-to-action a:hover {
+            text-decoration: underline;
+        }
+
+        /* Platform-specific styling */
+        .linkedin { 
+            border-left: 4px solid #0077b5; 
+        }
+        .linkedin .platform-icon { background-color: #0077b5; }
+
+        .instagram { 
+            border-left: 4px solid #e4405f; 
+        }
+        .instagram .platform-icon { 
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        .facebook { 
+            border-left: 4px solid #1877f2; 
+        }
+        .facebook .platform-icon { background-color: #1877f2; }
+
+        .twitter { 
+            border-left: 4px solid #1da1f2; 
+        }
+        .twitter .platform-icon { background-color: #000; }
+
+        .tiktok { 
+            border-left: 4px solid #fe2c55; 
+        }
+        .tiktok .platform-icon { background-color: #fe2c55; }
+
+        .threads { 
+            border-left: 4px solid #000; 
+        }
+        .threads .platform-icon { background-color: #000; }
+
+        .youtube { 
+            border-left: 4px solid #ff0000; 
+        }
+        .youtube .platform-icon { background-color: #ff0000; }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                margin: 0;
+                padding: 16px;
+            }
+            
+            .social-platform {
+                padding: 16px;
+            }
+
+            .hashtags {
+                gap: 2px;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .social-platform {
+                break-inside: avoid;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- LinkedIn Post -->
+        <article class="social-platform linkedin" id="linkedin">
+            <h2 class="platform-title">
+                <span class="platform-icon"></span>
+                LinkedIn
+            </h2>
+            <p class="platform-content">
+                In 2025, basic automation isn't enough. Explore advanced n8n techniques integrating AI, robust error handling, and enterprise-scale optimizations. Join the conversation on how these innovations can transform your workflows!
+            </p>
+            <div class="media-suggestion">
+                📸 Image suggestion: A professional graphic showcasing advanced n8n features.
+            </div>
+            <div class="hashtags">
+                <span class="hashtag">#Innovation</span>
+                <span class="hashtag">#Automation</span>
+                <span class="hashtag">#WorkflowSolutions</span>
+                <span class="hashtag">#DigitalTransformation</span>
+                <span class="hashtag">#Leadership</span>
+            </div>
+            <div class="call-to-action">
+                💬 Share your insights on advanced automation in the comments or visit our website for more!
+            </div>
+        </article>
+
+        <!-- Instagram Post -->
+        <article class="social-platform instagram" id="instagram">
+            <h2 class="platform-title">
+                <span class="platform-icon"></span>
+                Instagram
+            </h2>
+            <p class="platform-content">
+                Streamline your operations in 2025! 🤖✨ Discover how n8n can elevate your workflow with AI integration. Swipe to learn more!
+            </p>
+            <div class="media-suggestion">
+                🎥 Image suggestion: A visually appealing animation demonstrating an n8n workflow integration.
+            </div>
+            <div class="hashtags">
+                <span class="hashtag">#AutomationLife</span>
+                <span class="hashtag">#TechInnovation</span>
+                <span class="hashtag">#WorkflowTips</span>
+                <span class="hashtag">#Programming</span>
+                <span class="hashtag">#Engineering</span>
+            </div>
+            <div class="call-to-action">
+                🌐 Visit our website: <a href="https://workflows.diy" target="_blank" rel="noopener">https://workflows.diy</a>
+            </div>
+        </article>
+
+        <!-- Facebook Post -->
+        <article class="social-platform facebook" id="facebook">
+            <h2 class="platform-title">
+                <span class="platform-icon"></span>
+                Facebook
+            </h2>
+            <p class="platform-content">
+                🚀 Ready to elevate your automation game in 2025? Our latest n8n techniques include AI power-ups and enterprise optimizations that transform workflows! What's your favorite automation tip? Share below!
+            </p>
+            <div class="media-suggestion">
+                ❌ No image suggestion.
+            </div>
+            <div class="hashtags">
+                <span class="hashtag">#SmallBusinessAutomation</span>
+                <span class="hashtag">#Entrepreneurship</span>
+                <span class="hashtag">#Leadership</span>
+                <span class="hashtag">#WorkflowInnovation</span>
+            </div>
+            <div class="call-to-action">
+                👍 Like and share with your network!
+            </div>
+        </article>
+
+        <!-- X-Twitter Post -->
+        <article class="social-platform twitter" id="twitter">
+            <h2 class="platform-title">
+                <span class="platform-icon"></span>
+                X-Twitter
+            </h2>
+            <p class="platform-content">
+                In 2025, evolve your n8n experience with AI integration! 🤖🚀 What's your go-to n8n workflow? Share your tips!
+            </p>
+            <div class="media-suggestion">
+                🎬 Video suggestion: A quick tutorial clip demonstrating n8n features in action.
+            </div>
+            <div class="media-suggestion">
+                🖼️ Image suggestion: A stunning graphic representing AI-enhanced workflows.
+            </div>
+            <div class="hashtags">
+                <span class="hashtag">#WorkflowTrends</span>
+                <span class="hashtag">#AIWorkflows</span>
+                <span class="hashtag">#AutomationTips</span>
+                <span class="hashtag">#NoCodeSolutions</span>
+            </div>
+            <div class="call-to-action">
+                📝 Keep your tweets under 150 characters!
+            </div>
+        </article>
+
+        <!-- TikTok Post -->
+        <article class="social-platform tiktok" id="tiktok">
+            <h2 class="platform-title">
+                <span class="platform-icon"></span>
+                TikTok
+            </h2>
+            <p class="platform-content">
+                Transform your workflow in seconds! 🕒✨ Check out how to integrate AI with n8n for streamlined automation!
+            </p>
+            <div class="media-suggestion">
+                🎥 Video suggestion: A fun, fast-paced demo of creating an n8n workflow.
+            </div>
+            <div class="hashtags">
+                <span class="hashtag">#n8nTips</span>
+            </div>
+            <div class="call-to-action">
+                📱 Follow workflows.diy for more automation hacks!
+            </div>
+        </article>
+
+        <!-- Threads Post -->
+        <article class="social-platform threads" id="threads">
+            <h2 class="platform-title">
+                <span class="platform-icon"></span>
+                Threads
+            </h2>
+            <p class="platform-content">
+                What's the future of workflow automation looking like in 2025? With advances like AI integration, the potential is limitless! How are you enhancing your processes? Let's discuss!
+            </p>
+            <div class="media-suggestion">
+                📊 Image suggestion: An engaging visual showing a summary of advanced n8n workflows.
+            </div>
+            <div class="hashtags">
+                <span class="hashtag">#Innovation</span>
+                <span class="hashtag">#Automation</span>
+                <span class="hashtag">#AI</span>
+            </div>
+            <div class="call-to-action">
+                💬 Join the conversation!
+            </div>
+        </article>
+
+        <!-- YouTube Shorts Post -->
+        <article class="social-platform youtube" id="youtube">
+            <h2 class="platform-title">
+                <span class="platform-icon"></span>
+                YouTube Shorts
+            </h2>
+            <p class="platform-content">
+                Discover how to supercharge your workflows in 2025 with n8n's latest features! ✨ Subscribe for more amazing automation tips that make a difference!
+            </p>
+            <div class="media-suggestion">
+                🎬 Video suggestion: Highlight reel of n8n features and user testimonials.
+            </div>
+            <div class="hashtags">
+                <span class="hashtag">#n8n</span>
+                <span class="hashtag">#AutomationTips</span>
+                <span class="hashtag">#AI</span>
+            </div>
+            <div class="call-to-action">
+                🔔 Subscribe for more workflow tips!
+            </div>
+        </article>
+    </div>
+
+    <script>
+        // Add interactive functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add copy functionality for hashtags
+            const hashtags = document.querySelectorAll('.hashtag');
+            hashtags.forEach(hashtag => {
+                hashtag.addEventListener('click', function() {
+                    navigator.clipboard.writeText(this.textContent).then(() => {
+                        const originalText = this.textContent;
+                        this.textContent = '✓ Copied!';
+                        setTimeout(() => {
+                            this.textContent = originalText;
+                        }, 1000);
+                    });
+                });
+            });
+
+            // Add smooth scrolling for internal navigation
+            const platforms = document.querySelectorAll('.social-platform');
+            platforms.forEach((platform, index) => {
+                platform.addEventListener('click', function() {
+                    this.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'center' 
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
